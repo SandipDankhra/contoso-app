@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Route } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -9,10 +9,19 @@ import { Route } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  userFormGroup: FormGroup;
-  constructor(private formBilder: FormBuilder, private route: Route) { }
+  @Input() receivedParentMessage:string;
+  @Output() messageToEmit=new EventEmitter<string>();
 
+  messageToSendC: string = "Hello Parent !";
+
+  signinFormGroup: FormGroup;
+  constructor(private formBuilder: FormBuilder, private route: Router) { }
+ 
   ngOnInit() {
+    this.signinFormGroup=this.formBuilder.group({
+      Email:[''],
+      password:['']
+    })
   }
   userJson: any = [
     {
@@ -38,9 +47,10 @@ export class SigninComponent implements OnInit {
     }
   ];
 
-  signIn() {
-    for (var i = 0; i < this.userJson.length; i++) {
-      console.log(this.userJson[i]);
-    }
-  }
+  // signIn() {
+  //   for (var i = 0; i < this.userJson.length; i++) {
+  //     console.log(this.userJson[i]);
+  //   }
+  // }
+
 }

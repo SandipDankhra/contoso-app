@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-edit',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserEditComponent implements OnInit {
 
-  constructor() { }
+  userFormGroup: FormGroup;
+  receivedChildMessage: string;
+  messageSendParentToChild: string;
+
+  constructor(private formBuilder: FormBuilder, private route: Router) { }
 
   ngOnInit() {
   }
-
+  sendMessageParent(message: string) {
+    this.messageSendParentToChild = message;
+  }
+  getMessage(message: string) {
+    this.receivedChildMessage = message;
+  }
 }

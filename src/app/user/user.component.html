@@ -25,7 +25,6 @@
                             <div class="dropdown-menu login_user_action" aria-labelledby="login_user_action">
                                 <a class="dropdown-item" routerLink="/#">Change Password</a>
                                 <a class="dropdown-item" routerLink="/signin">Logout</a>
-
                             </div>
                         </li>
                         <!-- <li class="nav-item">
@@ -39,6 +38,7 @@
 
     <main class="main">
         <div class="container">
+            <form  >
             <div class="d-flex align-items-center mb-2">
                 <h1>Users</h1> <a routerLink="/signup" class="ml-auto btn btn-theme">Create New</a>
             </div>
@@ -71,7 +71,7 @@
                                 <td>def</td>
                                 <td>abc@gmail.com</td>
                                 <td>123</td>
-                                <td class="text-right"><a routerLink="/signup" class="mx-2" title="Edit"><i
+                                <td class="text-right"><a routerLink="/userEdit" class="mx-2" title="Edit"><i
                                             class="fas fa-pencil-alt"></i></a>|
                                     <a routerLink="/" class="mx-2 text-danger delete_record" title="Delete"><i
                                             class="fas fa-trash"></i></a></td>
@@ -81,7 +81,7 @@
                                 <td>uvw</td>
                                 <td>xyz@gmail.com</td>
                                 <td>012</td>
-                                <td class="text-right"><a routerLink="/signup" class="mx-2" title="Edit"><i
+                                <td class="text-right"><a routerLink="/userEdit" class="mx-2" title="Edit"><i
                                             class="fas fa-pencil-alt"></i></a>|
                                     <a routerLink="/" class="mx-2 text-danger delete_record" title="Delete"><i
                                             class="fas fa-trash"></i></a></td>
@@ -117,5 +117,6 @@
                     </nav>
                 </div>
             </div>
+        </form>
         </div>
     </main>

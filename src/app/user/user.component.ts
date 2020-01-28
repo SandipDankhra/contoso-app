@@ -8,12 +8,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class UserComponent implements OnInit {
 
+  receivedChildMessage: string;
+  messageToSendP: string = '';
   userFormGroup: FormGroup;
- // constructor(private formBilder: FormBuilder) { }
+  
+  constructor(private formBilder: FormBuilder) { }
 
   ngOnInit() {
 
   }
 
+  
 
 }

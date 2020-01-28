@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'user', component: UserComponent
   },
   {
-    path: 'user/edit', component: UserComponent
+    path: 'userEdit', component: UserEditComponent
   },
   {
     path: 'course', component: CourseComponent
