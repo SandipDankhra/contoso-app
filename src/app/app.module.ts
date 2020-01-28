@@ -9,7 +9,6 @@ import { CourseComponent } from './course/course.component';
 import { SignupComponent } from './user/signup/signup.component';
 import { SigninComponent } from './user/signin/signin.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
-import { AddComponent } from './course/add/add.component';
 import { CourseEditComponent } from './course/course-edit/course-edit.component';
 import { CourseAddComponent } from './course/course-add/course-add.component';
 
@@ -22,7 +21,6 @@ import { CourseAddComponent } from './course/course-add/course-add.component';
     SignupComponent,
     SigninComponent,
     UserEditComponent,
-    AddComponent,
     CourseEditComponent,
     CourseAddComponent,
     
