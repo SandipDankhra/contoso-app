@@ -11,6 +11,7 @@ import { SigninComponent } from './user/signin/signin.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { CourseEditComponent } from './course/course-edit/course-edit.component';
 import { CourseAddComponent } from './course/course-add/course-add.component';
+import { CourseDeatilComponent } from './course/course-deatil/course-deatil.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { CourseAddComponent } from './course/course-add/course-add.component';
     UserEditComponent,
     CourseEditComponent,
     CourseAddComponent,
+    CourseDeatilComponent,
     
   ],
   imports: [
