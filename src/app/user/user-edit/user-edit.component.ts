@@ -10,17 +10,11 @@ import { Router } from '@angular/router';
 export class UserEditComponent implements OnInit {
 
   userFormGroup: FormGroup;
-  receivedChildMessage: string;
-  messageSendParentToChild: string;
+ 
 
   constructor(private formBuilder: FormBuilder, private route: Router) { }
 
   ngOnInit() {
   }
-  sendMessageParent(message: string) {
-    this.messageSendParentToChild = message;
-  }
-  getMessage(message: string) {
-    this.receivedChildMessage = message;
-  }
+ 
 }

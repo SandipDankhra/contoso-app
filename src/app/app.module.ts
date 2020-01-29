@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
-// import { APP_LAZY_ROUTING } from './app.lazy.routing';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -34,8 +33,7 @@ import { CourseDeatilComponent } from './course/course-deatil/course-deatil.comp
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
-    
-    // APP_LAZY_ROUTING
+   
   ],
   exports: [RouterModule],
   providers: [],

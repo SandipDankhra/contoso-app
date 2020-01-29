@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,48 +9,45 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  @Input() receivedParentMessage:string;
-  @Output() messageToEmit=new EventEmitter<string>();
-
-  messageToSendC: string = "Hello Parent !";
-
   signinFormGroup: FormGroup;
-  constructor(private formBuilder: FormBuilder, private route: Router) { }
- 
+
+
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
+
   ngOnInit() {
-    this.signinFormGroup=this.formBuilder.group({
-      Email:[''],
-      password:['']
+    this.signinFormGroup = this.formBuilder.group({
+      Email: [''],
+      passWord: ['']
     })
   }
-  userJson: any = [
-    {
-      "id": 1,
-      "firstName": "Sandip",
-      "lastName": "Patel",
-      "emailAddress": "sandip@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": 2,
-      "firstName": "Vikas",
-      "lastName": "Patel",
-      "emailAddress": "vikas@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": 3,
-      "firstName": "Yagnik",
-      "lastName": "patel",
-      "emailAddress": "Yagnik@gmail.com",
-      "password": "12345"
-    }
-  ];
 
-  // signIn() {
-  //   for (var i = 0; i < this.userJson.length; i++) {
-  //     console.log(this.userJson[i]);
-  //   }
-  // }
+  userData = [
+    { id: 1, name: "Sandip", Email: "sandip@gmail.com", password: "1111" },
+    { id: 2, name: "Vikas", Email: "vikas@gmail.com", password: "2222" },
+    { id: 3, name: "Yagnik", Email: "yagnik@gmail.com", password: "3333" },
+    { id: 4, name: "Sanjay", Email: "sanjay@gmail.com", password: "4444" }
+  ]
+
+
+  userSignIn() {
+    var chk: boolean = false;
+    for (var i = 0; i < this.userData.length; i++) {
+      // var chEmail = this.userData[i].Email;
+      // var chPassword = this.userData[i].password;
+      if (this.signinFormGroup.controls.Email.value == this.userData[i].Email && this.signinFormGroup.controls.passWord.value == this.userData[i].password) {
+        console.log("check Email and Pass");
+        this.router.navigateByUrl('/user');
+        chk = true;
+        break;
+      }
+    }
+    if (chk == false) {
+      alert("invalid Username or Password");
+    }
+
+  }
+
+
+
 
 }
