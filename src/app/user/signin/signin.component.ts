@@ -31,9 +31,12 @@ export class SigninComponent implements OnInit {
 
   userSignIn() {
     var chk: boolean = false;
+
     for (var i = 0; i < this.userData.length; i++) {
+      
       // var chEmail = this.userData[i].Email;
       // var chPassword = this.userData[i].password;
+
       if (this.signinFormGroup.controls.Email.value == this.userData[i].Email && this.signinFormGroup.controls.passWord.value == this.userData[i].password) {
         console.log("check Email and Pass");
         this.router.navigateByUrl('/user');
