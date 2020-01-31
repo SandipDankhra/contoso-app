@@ -13,11 +13,9 @@ export class UserComponent implements OnInit {
 
   constructor(private formBilder: FormBuilder) { }
 
-  userData = [
-    { id: 1, name: "Sandip", emailId: "sandip@gmail.com", passWord: "1234" },
-    { id: 2, name: "Vikas", emailId: "vikas@gmail.com", passWord: "1234" },
-    { id: 3, name: "Yagnik", emailId: "yagnik@gmail.com", passWord: "1234" },
-    { id: 4, name: "Sanjay", emailId: "sanjay@gmail.com", passWord: "1234" }
+  userData: any = [
+    { id: 1, firstname: "Sandip", lastname: "Dankhra", Email: "sandip@gmail.com", password: "1111" },
+    { id: 2, firstname: "Vikas", lastname: "Patel", Email: "vikas@gmail.com", password: "1111" },
   ]
 
 

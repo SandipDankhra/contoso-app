@@ -12,8 +12,17 @@ export class SignupComponent implements OnInit {
   signUpFormGroup: FormGroup;
   constructor(private formBuilder: FormBuilder, private router: Router) { }
 
+
+
+  userData: any = [
+    { id: 1, firstname: "Sandip", lastname: "Dankhra", Email: "sandip@gmail.com", password: "1111" },
+    { id: 2, firstname: "Vikas", lastname: "Patel", Email: "vikas@gmail.com", password: "1111" },
+  ]
+
+  cntLength = this.userData.length + 1;
   ngOnInit() {
     this.signUpFormGroup = this.formBuilder.group({
+      id: this.cntLength,
       firstName: [''],
       lastName: [''],
       email: [''],
@@ -21,13 +30,16 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  userData = [
-    { id: 1, firstname: "Sandip", lastname: "Dankhra", Email: "sandip@gmail.com", password: "1111" },
-    { id: 2, firstname: "Vikas", lastname: "Patel", Email: "vikas@gmail.com", password: "1111" }
 
-  ]
+  userAddData() {
+    this.userData.push(this.signUpFormGroup.value);
+    console.log(this.signUpFormGroup.value);
+    console.log(this.userData);
+    // this.userData.firstname = this.signUpFormGroup.controls.firstName.value;
+    // this.userData.lastName = this.signUpFormGroup.controls.lastName.value;
+    // this.userData.Email = this.signUpFormGroup.controls.email.value;
+    // this.userData.password = this.signUpFormGroup.controls.passWord.value;
 
-  userAddData(){
-    this.signUpFormGroup
   }
+
 }

@@ -25,7 +25,7 @@ import { CourseDeatilComponent } from './course/course-deatil/course-deatil.comp
     CourseEditComponent,
     CourseAddComponent,
     CourseDeatilComponent
-   
+  
 
   ],
   imports: [
