@@ -73,7 +73,7 @@
                                     <td>{{user.Email}}</td>
                                     <td>{{user.password}}</td>
 
-                                    <td class="text-right"><a routerLink="/userEdit" class="mx-2" title="Edit"><i
+                                    <td class="text-right"><a [routerLink]="['userEdit',user.id]" routerLinkActive="router-link-active"  class="mx-2" title="Edit"><i
                                                 class="fas fa-pencil-alt"></i></a>|
                                         <a (click)="deleteData()" class="mx-2 text-danger delete_record" title="Delete"><i
                                                 class="fas fa-trash"></i></a></td>
