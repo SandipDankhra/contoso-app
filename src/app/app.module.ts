@@ -14,6 +14,7 @@ import { CourseAddComponent } from './course/course-add/course-add.component';
 import { CourseDeatilComponent } from './course/course-deatil/course-deatil.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +25,9 @@ import { CourseDeatilComponent } from './course/course-deatil/course-deatil.comp
     UserEditComponent,
     CourseEditComponent,
     CourseAddComponent,
-    CourseDeatilComponent
-  
+    CourseDeatilComponent,
+   
+
 
   ],
   imports: [
@@ -33,7 +35,7 @@ import { CourseDeatilComponent } from './course/course-deatil/course-deatil.comp
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
-   
+
   ],
   exports: [RouterModule],
   providers: [],
