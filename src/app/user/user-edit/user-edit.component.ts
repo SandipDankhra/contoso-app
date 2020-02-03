@@ -20,7 +20,9 @@ export class UserEditComponent implements OnInit {
 
   ngOnInit() {
     this.getId = this.activatedRoute.snapshot.paramMap.get("id");
+
     // let item = UserEditData.filter(f => f.id = this.getId[0]);
+    
     this.getId = this.getId - 1;
 
     console.log("Index : " + this.getId);
@@ -37,7 +39,6 @@ export class UserEditComponent implements OnInit {
       email: [this.userData[this.getId].email],
       passWord: [this.userData[this.getId].passWord]
     });
-
   }
 
   userEditData() {

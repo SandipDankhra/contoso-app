@@ -14,9 +14,6 @@ export class SignupComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router) { }
   userdata=UserData;
 
-
-  
-
   cntLength = this.userdata.length + 1;
   ngOnInit() {
     this.signUpFormGroup = this.formBuilder.group({
@@ -30,9 +27,12 @@ export class SignupComponent implements OnInit {
 
 
   userAddData() {
+
     this.userdata.push(this.signUpFormGroup.value);
+
     console.log(this.signUpFormGroup.value);
     console.log(this.userdata);
+
     // this.userData.firstname = this.signUpFormGroup.controls.firstName.value;
     // this.userData.lastName = this.signUpFormGroup.controls.lastName.value;
     // this.userData.Email = this.signUpFormGroup.controls.email.value;
