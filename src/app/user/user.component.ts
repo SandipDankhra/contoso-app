@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router'
 import { UserData } from '../userData.model';
 
 @Component({
@@ -11,16 +12,20 @@ export class UserComponent implements OnInit {
 
 
   userFormGroup: FormGroup;
-  userdata=UserData;
-
-  constructor(private formBilder: FormBuilder) { }
+  userdata = UserData;
+  getId;
+  constructor(private formBilder: FormBuilder, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
+
   }
-  deleteData() {
-    
-    alert("Are you sure you want to delete this?");
+  deleteData(removeID) {
+    const _removeID = this.userdata.findIndex(e => e.id == removeID);
+    if (_removeID !== -1) {
+      this.userdata.splice(_removeID, 1);
+      alert("ID " + removeID + " Are you sure you want to delete this?");
+    }
   }
 
 

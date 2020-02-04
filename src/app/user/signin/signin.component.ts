@@ -23,14 +23,6 @@ export class SigninComponent implements OnInit {
     })
   }
 
-  // userData = [
-  //   { id: 1, name: "Sandip", Email: "sandip@gmail.com", password: "1111" },
-  //   { id: 2, name: "Vikas", Email: "vikas@gmail.com", password: "2222" },
-  //   { id: 3, name: "Yagnik", Email: "yagnik@gmail.com", password: "3333" },
-  //   { id: 4, name: "Sanjay", Email: "sanjay@gmail.com", password: "4444" }
-  // ]
-
-
   userSignIn() {
     var chk: boolean = false;
 
@@ -51,8 +43,4 @@ export class SigninComponent implements OnInit {
     }
 
   }
-
-
-
-
 }
